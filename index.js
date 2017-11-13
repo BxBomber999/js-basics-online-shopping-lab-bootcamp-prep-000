@@ -61,6 +61,7 @@ function removeFromCart(item) {
   var newCart = []
   for(var j = 0; j < cart.length; j++){
     var key = Object.keys(cart[j])[0]
+    console.log(key);
     if(key !== item){
       newCart.push(cart[j])
     }
@@ -88,3 +89,5 @@ addToCart("apples")
 viewCart()
 addToCart("soup")
 viewCart()
+removeFromCart("soup")
+
