@@ -90,4 +90,4 @@ viewCart()
 addToCart("soup")
 viewCart()
 removeFromCart("soup")
-
+viewCart()
