@@ -59,15 +59,16 @@ function total() {
 
 function removeFromCart(item) {
   var newCart = []
+  var found = false
   for(var j = 0; j < cart.length; j++){
     var key = Object.keys(cart[j])[0]
     if(key !== item){
       newCart.push(cart[j])
+    } else {
+      found = true
     }
   }
-  console.log(cart);
-  console.log(newCart);
-  if(cart === newCart){
+  if(!found){
     console.log("That item is not in your cart.");
     return cart
   } else {
