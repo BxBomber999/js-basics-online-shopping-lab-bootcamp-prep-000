@@ -82,8 +82,7 @@ function placeOrder(cardNumber) {
 }
 
 addToCart("bananas")
-console.log(viewCart());
+viewCart()
 addToCart("apples")
-console.log(viewCart());
-addToCart("soup")
-console.log(viewCart());
+viewCart()addToCart("soup")
+viewCart()
