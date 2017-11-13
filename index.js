@@ -64,8 +64,12 @@ function removeFromCart(item) {
       newCart.push(cart[i])
     }
   }
-  (cart === newCart) ? console.log("That item is not in your cart.") : return newCart
-  return cart
+  if(cart === newCart){
+    console.log("That item is not in your cart.")
+    return cart
+  } else {
+    return newCart  
+  }
 }
 
 function placeOrder(cardNumber) {
