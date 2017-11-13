@@ -66,6 +66,8 @@ function removeFromCart(item) {
       newCart.push(cart[j])
     }
   }
+  console.log(cart);
+  console.log(newCart);
   if(cart === newCart){
     console.log("That item is not in your cart.")
     return cart
