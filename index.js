@@ -38,9 +38,9 @@ function viewCart() {
           var objKey = Object.keys(cart[i])[0]
           var objVal = cart[i][objKey]
           if(i < cart.length-1){
-            output += `, ${objKey} at $${objVal}`
+            output += ` ${objKey} at $${objVal},`
           } else {
-            output += `, and ${objKey} at $${objVal}.`
+            output += ` and ${objKey} at $${objVal}.`
           }
         }
         console.log(output); break;
