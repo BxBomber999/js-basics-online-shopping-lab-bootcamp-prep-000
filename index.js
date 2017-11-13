@@ -33,7 +33,7 @@ function viewCart() {
         var objKey2 = Object.keys(cart[1])[0]
         var objVal2 = cart[1][objKey2]
         console.log(output + `${objKey1} at $${objVal1} and ${objKey2} at $${objVal2}.`); break;
-      case (cart.length>=3):
+      case >= 3:
         for(var i=0;i<cart.length;i++){
           var objKey = Object.keys(cart[i])[0]
           var objVal = cart[i][objKey]
