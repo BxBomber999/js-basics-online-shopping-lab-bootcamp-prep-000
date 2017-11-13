@@ -60,9 +60,9 @@ function total() {
 function removeFromCart(item) {
   var newCart = []
   for(var j = 0; j < cart.length; j++){
-    var key = Object.keys(cart[i])[0]
+    var key = Object.keys(cart[j])[0]
     if(key !== item){
-      newCart.push(cart[i])
+      newCart.push(cart[j])
     }
   }
   if(cart === newCart){
