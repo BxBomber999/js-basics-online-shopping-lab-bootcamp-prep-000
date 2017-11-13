@@ -50,9 +50,9 @@ function viewCart() {
 
 function total() {
   var total = 0
-  for(i=0;i<cart.length;i++){
-    var objKey = Object.keys(cart[0])[0]
-    total += cart[0][objKey]
+  for(var k=0;k<cart.length;k++){
+    var objKey = Object.keys(cart[k])[0]
+    total += cart[k][objKey]
   }
   return total
 }
@@ -83,8 +83,7 @@ function placeOrder(cardNumber) {
 
 addToCart("bananas")
 viewCart()
-addToCart(
-  "apples")
+addToCart("apples")
 viewCart()
 addToCart("soup")
 viewCart()
