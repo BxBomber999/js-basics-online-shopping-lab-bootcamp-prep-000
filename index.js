@@ -45,6 +45,7 @@ function viewCart() {
         }
         console.log(output); break;
     }
+    return true
 }
 
 function total() {
@@ -68,7 +69,7 @@ function removeFromCart(item) {
     console.log("That item is not in your cart.")
     return cart
   } else {
-    return newCart  
+    return newCart
   }
 }
 
