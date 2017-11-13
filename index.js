@@ -10,15 +10,50 @@ function setCart(c) {
 }
 
 function addToCart(item) {
- // write your code here
+  var price = Math.floor(Math.random() * 100) + 1
+  var itemName = item
+  var object = {}
+  object[itemName] = price
+  cart.push(object)
+  console.log(`${itemName} has been added to your cart.`)
+  return cart
 }
 
 function viewCart() {
-  // write your code here
+    var output = "In your cart, you have "
+    switch(cart.length){
+      case 0: console.log("Your shopping cart is empty."); break;
+      case 1:
+        var objKey = Object.keys(cart[0])[0]
+        var objVal = cart[0][objKey]
+      console.log(output + `${objKey} at $${objVal}.`); break;
+      case 2:
+        var objKey1 = Object.keys(cart[0])[0]
+        var objVal1 = cart[0][objKey1]
+        var objKey2 = Object.keys(cart[1])[0]
+        var objVal2 = cart[1][objKey2]
+        console.log(output + `${objKey1} at $${objVal1} and ${objKey2} at $${objVal2}.`); break;
+      case (cart.length>=3):
+        for(var i=0;i<cart.length;i++){
+          var objKey = Object.keys(cart[i])[0]
+          var objVal = cart[i][objKey]
+          if(i < cart.length-1){
+            output += `, ${objKey} at $${objVal}`
+          } else {
+            output += `, and ${objKey} at $${objVal}.`
+          }
+        }
+        console.log(output); break;
+    }
 }
 
 function total() {
-  // write your code here
+  var total = 0
+  for(i=0;i<cart.length;i++){
+    var objKey = Object.keys(cart[0])[0]
+    total += cart[0][objKey]
+  }
+  return total
 }
 
 function removeFromCart(item) {
@@ -28,3 +63,10 @@ function removeFromCart(item) {
 function placeOrder(cardNumber) {
   // write your code here
 }
+
+addToCart("bananas")
+console.log(viewCart());
+addToCart("apples")
+console.log(viewCart());
+addToCart("soup")
+console.log(viewCart());
